@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { Image } from "next/image";
+import Image from "next/image";
 
 import classes from "../styles/hero.module.scss";
 import Button from "../components/Button";
@@ -38,7 +38,7 @@ const Hero = ({ slides }) => {
           <div key={index} className={classes.hero_slide}>
             {index === currentSlide && (
               <section className={classes.hero_slider}>
-                <Image
+                <img
                   src={slide.image}
                   alt={slide.title}
                   className={classes.hero_image}
