@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
@@ -13,6 +13,17 @@ export default function Home() {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 80) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavbarColor);
+  }, []);
   return (
     <>
       <Head>
@@ -26,7 +37,7 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <Navbar toggle={toggle} />
+      <Navbar toggle={toggle} colorChange={colorChange} />
       {isOpen && <Dropdown isOpen={isOpen} toggle={toggle} />}
       <Hero slides={Slider} />
       <InfoSection data={InfoDataOne} />

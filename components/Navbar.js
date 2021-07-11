@@ -1,19 +1,9 @@
-import { useState } from "react";
 import classes from "../styles/navbar.module.scss";
 import Link from "next/link";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { menuData } from "../Data/MenuData";
 import Button from "./Button";
-const Navbar = ({ toggle }) => {
-  const [colorChange, setColorchange] = useState(false);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
-  };
-  window.addEventListener("scroll", changeNavbarColor);
+const Navbar = ({ toggle, colorChange }) => {
   return (
     <nav
       className={`${classes.navbar} ${
