@@ -1,4 +1,6 @@
 import { useRef, useState, useEffect } from "react";
+import { Image } from "next/image";
+
 import classes from "../styles/hero.module.scss";
 import Button from "../components/Button";
 import { IoMdArrowRoundForward } from "react-icons/io";
@@ -22,12 +24,12 @@ const Hero = ({ slides }) => {
     return null;
   }
 
-  // useEffect(() => {
-  //   timeout.current = setTimeout(nextSlide, 3000);
-  //   return () => {
-  //     if (timeout.current) clearTimeout(timeout.current);
-  //   };
-  // }, [currentSlide, length]);
+  useEffect(() => {
+    timeout.current = setTimeout(nextSlide, 3000);
+    return () => {
+      if (timeout.current) clearTimeout(timeout.current);
+    };
+  }, [currentSlide, length]);
 
   return (
     <section className={classes.hero}>
@@ -36,7 +38,7 @@ const Hero = ({ slides }) => {
           <div key={index} className={classes.hero_slide}>
             {index === currentSlide && (
               <section className={classes.hero_slider}>
-                <img
+                <Image
                   src={slide.image}
                   alt={slide.title}
                   className={classes.hero_image}

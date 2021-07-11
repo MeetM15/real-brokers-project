@@ -1,3 +1,4 @@
+import { Image } from "next/image";
 import classes from "../styles/infosection.module.scss";
 import Button from "./Button";
 const InfoSection = ({ data }) => {
@@ -19,7 +20,7 @@ const InfoSection = ({ data }) => {
             data.reverse ? classes.switch_order_right : null
           }`}
         >
-          <img src={data.img} alt={data.heading} />
+          <Image src={data.img} alt={data.heading} />
         </div>
       </div>
     </section>
