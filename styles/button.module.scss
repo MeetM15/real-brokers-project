@@ -1,0 +1,40 @@
+$dark-blue: #000b1a;
+$vermillion: #e03616;
+$platinum: #e5e5e5;
+$cyan: #1be7ff;
+$black: #000;
+$white: #fff;
+.bgcolor1 {
+  background-color: $dark-blue;
+  color: $white;
+}
+.bgcolor2 {
+  background-color: $vermillion;
+  color: $dark-blue;
+}
+.big {
+  padding: 16px 40px;
+  font-size: 20px;
+}
+.small {
+  padding: 14px 24px;
+  font-size: 14px;
+}
+.nav_link {
+  min-width: 100px;
+  max-width: 200px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.nav_link:hover {
+  transform: scale(1.05);
+}
