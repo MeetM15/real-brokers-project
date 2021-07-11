@@ -22,6 +22,9 @@ const Hero = ({ slides }) => {
   };
 
   useEffect(() => {
+    const nextSlide = () => {
+      setCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide + 1);
+    };
     timeout.current = setTimeout(nextSlide, 3000);
     return () => {
       if (timeout.current) clearTimeout(timeout.current);
