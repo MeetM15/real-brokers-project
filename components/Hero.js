@@ -20,9 +20,6 @@ const Hero = ({ slides }) => {
     setCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide + 1);
     // console.log(currentSlide);
   };
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
-  }
 
   useEffect(() => {
     timeout.current = setTimeout(nextSlide, 3000);
@@ -31,6 +28,9 @@ const Hero = ({ slides }) => {
     };
   }, [currentSlide, length]);
 
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
   return (
     <section className={classes.hero}>
       {slides.map((slide, index) => {
