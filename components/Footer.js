@@ -19,7 +19,7 @@ const Footer = () => {
             <div className={classes.social_icons}>
               <a
                 className={classes.social_icon_link}
-                href="/"
+                href="#"
                 target="_blank"
                 aria-label="Facebook"
               >
@@ -27,7 +27,7 @@ const Footer = () => {
               </a>
               <a
                 className={classes.social_icon_link}
-                href="/"
+                href="#"
                 target="_blank"
                 aria-label="Instagram"
               >
@@ -35,7 +35,7 @@ const Footer = () => {
               </a>
               <a
                 className={classes.social_icon_link}
-                href="/"
+                href="#"
                 target="_blank"
                 aria-label="Youtube"
               >
@@ -43,7 +43,7 @@ const Footer = () => {
               </a>
               <a
                 className={classes.social_icon_link}
-                href="/"
+                href="#"
                 target="_blank"
                 aria-label="Twitter"
                 rel="noopener noreferrer"
@@ -52,7 +52,7 @@ const Footer = () => {
               </a>
               <a
                 className={classes.social_icon_link}
-                href="/"
+                href="#"
                 target="_blank"
                 aria-label="Linkedin"
               >
